@@ -61,7 +61,7 @@ def get_job_list(browser: webdriver.Chrome, jobs_data, last_job_link):
 
 
 def find_jobs(browser: webdriver.Chrome):
-    jobs_output_file = "properties_data.json"
+    jobs_output_file = "jobs_data.json"
 
     if os.path.exists(jobs_output_file):
         with open(jobs_output_file, "r") as file:
