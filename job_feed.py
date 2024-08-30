@@ -1,5 +1,6 @@
 import json
 import os
+import time
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -9,6 +10,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 def get_job_list(browser: webdriver.Chrome, jobs_data, last_job_link):
     browser.get("https://www.upwork.com/nx/search/jobs/?nbs=1&q=python&page=1&per_page=50")
+
+    print(browser.page_source)
     jobs_articles = browser.find_elements(By.CLASS_NAME, "job-tile")
 
     print(len(jobs_articles))
